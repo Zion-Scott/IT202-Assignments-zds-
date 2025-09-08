@@ -1,0 +1,1 @@
+This folder is for my IT202 Assignment folders for this class.
