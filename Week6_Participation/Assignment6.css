@@ -1,0 +1,9 @@
+h1 {
+    background-color:darkmagenta;
+    width:260px;
+    height: 40px;
+    border: 6px dashed blue;
+    border-radius: 10px;
+    color:coral;
+}
+
