@@ -1,6 +1,6 @@
 <?php //Error #1 Incorrect opening tag for php
 
-require('connect.php'); // Error #2 No quotes around connect.php | Error #4 missing semicolon after require statement
+require('connect.php'); // Error #2 No quotes around connect.php | Error #3 missing semicolon after require statement
 // This code has 10 errors. Find and fix them. Error #4 Incorrect comment tag
 $name = $_POST['name'];
 if (isset ($name)) { //Error #5 Incorrect variable name ($name and $Name) | Error #6 missing closing parenthesis
