@@ -1,3 +1,20 @@
+--Log on to Database
+<?php
+//Makes DB connection
+$servername = "sql1.njit.edu";
+$username = "zds";
+$password = "SparkClass2022!";
+$dbname = "zds";
+$con = mysqli_connect($servername,$username,$password,$dbname);
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+else
+ {
+echo "CONNECTED ";
+}
+?>
 
 -- a SELECT statement that retrieves all records in your DB table.
 SELECT * FROM `SampleTable`; 
@@ -55,4 +72,6 @@ SELECT
 FROM Student
 INNER JOIN Transcript
 ON Student.ID = Transcript.ID;
+
+
 
