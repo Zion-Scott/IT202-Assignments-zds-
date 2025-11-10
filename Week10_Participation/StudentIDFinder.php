@@ -11,7 +11,7 @@
     <label for="student_id">Student ID:</label>
     <input type="text" id="student_id" name="student_id" required
            value="<?php echo htmlspecialchars($submittedId); ?>">
-    <button type="submit">Lookup</button>
+    <button type="submit">Search</button>
   </form>
 
   <p><a href="index.php">Home</a></p>
