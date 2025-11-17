@@ -4,12 +4,41 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-             if (emailAddress === "") {
-          $("#email1Error").text("This field is required");
+        $(document).ready(function() {
+        $("#submitButton").click(function() {
+        $('#emailAddressText').hide();
+        $('#confirmEmailAddressText').hide();
+        
+        var emailAddress = $('#emailAddress').val();
+        var confirmEmailAddress = $('#confirmEmailAddress').val();
+        var isValid = true;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if ($.trim(emailAddress) === '') {
+            $('#emailAddressText').show();
+            isValid = false;
         }
-        if (confirmEmailAddress === "") {
-          $("#email2Error").text("This field is required");
+        if ($.trim(confirmEmailAddress) === '') {
+            $('#confirmEmailAddressText').show();
+            isValid = false;
         }
+        if (isValid) {
+            const emailInput = document.getElementById('emailAddress');
+            const confirmEmailInput = document.getElementById('confirmEmailAddress');
+
+            if (!emailRegex.test(emailAddress)) {
+                alert ('This is an invalid email format');
+            } else if (emailAddress !== confirmEmailAddress) {
+                alert('These emails do not match');
+            } else {
+                alert('Email confirmation successful!');
+            }
+        }
+            });
+        });
+
+
+
         </script>
     </head>
 
@@ -18,10 +47,10 @@
 
         <form>
             <label>Enter E-mail Address</label>
-            <input type="text" name="emailAddress" id="emailAddress" required/>
+            <input type="text" name="emailAddress" id="emailAddress"/><p id="emailAddressText">This field is required</p>
             <br />
             <label>Confirm E-mail Address</label>
-            <input type="text" name="confirmEmailAddress" id="confirmEmailAddress" required/>
+            <input type="text" name="confirmEmailAddress" id="confirmEmailAddress"/><p id="confirmEmailAddressText">This field is required</p>
             <span id="confirmEmailAddress"></span>
             <br />
             <button type="submit" id="submitButton">Submit</button>

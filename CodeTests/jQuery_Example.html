@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Example</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+      $(document).ready(function() {
+      $("#hideBtn").click(function() {
+        if ($('#message').is(':hidden')) {
+          $("#message").show();
+        }
+        else {
+          $("#message").hide();
+        }
+          });
+        });
+      </script>
+  </head>
+  <body>
+    <p id="message">This text will disappear when you click the button.</p>
+    <button id="hideBtn">Hide Text</button>
+  </body>
+</html>
