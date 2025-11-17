@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <title>Email Verification</title>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+             if (emailAddress === "") {
+          $("#email1Error").text("This field is required");
+        }
+        if (confirmEmailAddress === "") {
+          $("#email2Error").text("This field is required");
+        }
+        </script>
+    </head>
+
+    <body>
+        <h1>Please verify your E-mail address</h1>
+
+        <form>
+            <label>Enter E-mail Address</label>
+            <input type="text" name="emailAddress" id="emailAddress" required/>
+            <br />
+            <label>Confirm E-mail Address</label>
+            <input type="text" name="confirmEmailAddress" id="confirmEmailAddress" required/>
+            <span id="confirmEmailAddress"></span>
+            <br />
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+        
+
+
+    </body>
+</html>
